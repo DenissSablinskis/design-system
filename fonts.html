@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght,CRSV@100..900,0..1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Design system</title>
+</head>
+<body>
+    <div class="container">
+        <h1>My Website Style Guide</h1>
+         <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Main</a>
+                    </li>
+                    <li>
+                        <a href="colors.html">Colors</a>
+                    </li>
+                    <li>
+                        <a href="fonts.html">Fonts</a>
+                    </li>
+                    <li>
+                        <a href="text-styles.html">Text Styles</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="fonts">
+            <div class="header">
+                <h2>Fonts</h2>
+            </div>
+            <div class="content">
+                <textarea name="text" placeholder="Type something to see the font style..." id="text" cols="50" rows="0" maxlength="50"></textarea>
+                <form method="post">
+                    <div class="align-select">
+                        <label for="font">Font:</label>
+                        <select name="font" id="font">
+                            <option value="bitcount prop double ink">Bitcount Prop Double Ink</option>
+                            <option value="verdana">Verdana</option>
+                            <option value="helvetica">Helvetica</option>
+                            <option value="times" selected>Times New Roman</option>
+                            <option value="roboto condensed">Roboto Condensed</option>
+                            <option value="lato">Lato</option>
+                        </select>
+                    </div>
+                    <div class="align-select">
+                        <label for="weight">Weight:</label>
+                        <select name="weight" id="weight">
+                            <option value="normal">Normal</option>
+                            <option value="bold">Bold</option>
+                            <option value="bolder">Bolder</option>
+                            <option value="lighter">Lighter</option>
+                        </select>
+                    </div>
+                    <div class="align-select">
+                        <label for="style">Style:</label>
+                        <select name="style" id="style">
+                            <option value="normal">Normal</option>
+                            <option value="italic">Italic</option>
+                        </select>
+                    </div>
+                    <div class="align-select">
+                        <label for="size">Size:</label>
+                        <select name="size" id="size">
+                            <option value="12px">12px</option>
+                            <option value="16px" selected>16px</option>
+                            <option value="20px">20px</option>
+                            <option value="24px">24px</option>
+                            <option value="32px">32px</option>
+                            <option value="48px">48px</option>
+                            <option value="64px">64px</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="preview"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

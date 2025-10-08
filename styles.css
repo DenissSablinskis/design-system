@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.colors,
+.fonts,
+.text-styles {
+  border: 5px double burlywood;
+  border-radius: 20px;
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.fonts,
+.text-styles {
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: bisque;
+}
+
+.colors .header,
+.fonts .header,
+.text-styles .header {
+  text-align: center;
+  grid-area: 1 / 1 / 1 / span 3;
+}
+
+.colors .header h2,
+.fonts .header h2,
+.text-styles .header h2 {
+  font-size: 50px;
+}
+
+.colors .color {
+  text-align: center;
+  align-items: center;
+  display: grid;
+}
+
+.colors .background {
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.colors .cool .background {
+  background-color: #0fb5a4;
+}
+
+.colors .warm .background {
+  background-color: #f16843;
+}
+
+.colors .dark .background {
+  background-color: #183b33;
+}
+
+.colors .light .background {
+  background-color: #43e1e6;
+} 
+
+.colors .pastel .background {
+  background-color: #cee8e2;
+}
+
+.colors .neon .background {
+  background-color: #c5dd08;
+}
+
+.hidden {
+  display: none;
+}
+
+.fonts .content, .text-styles .content {
+  grid-area: 2 / 1 / span 2 / span 3;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}
+
+.content .preview {
+  border: 2px solid burlywood;
+  border-radius: 10px;
+  padding: 10px;
+  height: 95%;
+  flex-basis: 30%;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+.content textarea {
+  flex-basis: 30%;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid burlywood;
+  resize: none;
+  height: 90%;
+  font-size: 20px;
+}
+
+.content select {
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid burlywood;
+  width: 70%;
+}
+
+.align-select {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  align-content: center;
+}
+
+#left, #right {
+  width: 50%;
+}
+
+#left {
+  margin:50px;
+}
+
+#right {
+  border: 2px solid burlywood;
+  border-radius: 10px;
+  margin:10px;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+nav ul {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0;
+}
+
+nav ul li{
+  border: 2px solid burlywood;
+  border-radius: 10px;
+  box-shadow: 10px 10px;
+  height: 10vw;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li:hover {
+  transition: background-color 2s;
+  background-color: burlywood;
+}
+
+nav ul li:active {
+  box-shadow: 0 0;
+  margin-left:10px;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 4vw;
+  color: black;
+}
+
+a:hover {
+  color: burlywood;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .color h2, .color h3 {
+    font-size: 2.8vw;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+   
+    .text-styles, .fonts {
+      min-height: 550px;
+      height: fit-content;
+      grid-template: 150px 1fr 1fr / repeat(3, 1fr);
+    }
+
+    label {
+      font-size: 25px;
+    }
+
+    .content textarea {
+    font-size: 3vw;
+    height: 100%;
+    margin-bottom:10px;
+  }
+
+  .content .preview {
+    margin: 10px 0;
+    overflow: visible;
+  }
+
+  .content select {
+    font-size: 15px;
+    margin: 0;
+  } 
+
+  .content {
+    flex-direction: column;
+    padding:0 10%;
+  }
+
+  #right {
+    width: 100%;
+    margin:10px 0;
+    overflow: scroll;
+  }
+
+  .text-styles .align-select {
+    flex-direction: column;
+  }
+
+  #left {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  #left select{
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .color h2, .color h3 {
+    margin-top:30%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
